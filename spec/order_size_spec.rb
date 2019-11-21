@@ -134,6 +134,8 @@ describe OrderSize do
                 tops = my_json.select{|x| x['name'] == 'tops'}
                 #puts sports_bra.inspect
                 expect(tops.first['value']).to eql("L")
+                expect(tops.first).to have_key('name')
+                expect(tops.first).to have_key('value')
                 
             end   
         end
